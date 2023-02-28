@@ -1,33 +1,49 @@
 import styled from 'styled-components';
 
-export const AlphabeticalListContainer = styled.div`
+export const Wrapper = styled.div`
+  background-color: #ffff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+`;
+
+export const LetterSection = styled.div`
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -1px;
+    height: 0;
+    border-top: 1px solid #4f31a1;
+  }
+`;
+
+export const LetterHeader = styled.div`
+  background-color: #4f31a1;
+  color: #ffff; /* Esmeralda clara */
+  font-size: 24px;
+  font-weight: normal;
+  padding: 0 36px;
+  border: 1px solid white;
+  border-left: none;
+  border-right: none;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 `;
 
-export const AlphabeticalSection = styled.div`
-  width: 200px;
-  margin-right: 20px;
-`;
-
-export const PatientItem = styled.div`
+export const PatientContainer = styled.div`
   display: flex;
   align-items: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  padding: 0 18px;
+  height: 30px;
+  background-color: #ffff;
 `;
 
-export const PatientIcon = styled.div`
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  background-color: #ccc;
-`;
-
-export const NoPatients = styled.div`
-  color: #999;
-  font-style: italic;
-  margin-top: 10px;
+export const PatientName = styled.span`
+  margin-left: 8px;
+  margin-right: 8px; // adicionado margem à direita para separar o ícone do nome
 `;
