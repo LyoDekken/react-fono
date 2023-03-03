@@ -10,7 +10,6 @@ import { FiAlertCircle } from 'react-icons/fi';
 import { useField } from '@unform/core';
 
 import { Container, Error } from './styles';
-// import ToggleButton from '../TogglePassword/index';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
@@ -29,7 +28,6 @@ const Input: React.FC<InputProps> = ({
   const inputRef = useRef<HTMLInputElement>(null);
   const [isFocused, setIsFocused] = useState(false);
   const [isField, setIsField] = useState(false);
-  // const [showPassword, setShowPassword] = useState(false);
   const { fieldName, defaultValue, error, registerField } = useField(name);
 
   const handleInputFocus = useCallback(() => {
@@ -49,13 +47,6 @@ const Input: React.FC<InputProps> = ({
       path: 'value',
     });
   }, [fieldName, registerField]);
-
-  /* const handleToggleShowPassword = useCallback(() => {
-    setShowPassword(prevState => !prevState);
-  }, []); */
-
-  /* const inputType =
-    rest.type === 'password' && !showPassword ? 'password' : 'text'; */
 
   return (
     <Container

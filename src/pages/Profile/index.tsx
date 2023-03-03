@@ -131,12 +131,16 @@ const Profile: React.FC = () => {
     [addToast, updateUser],
   );
 
+  const handleGoBack = useCallback(() => {
+    history.goBack();
+  }, [history]);
+
   return (
     <Container>
       <header>
         <div>
-          <Link to="/dashboard">
-            <FiArrowLeft size={32} />
+          <Link to="/">
+            <FiArrowLeft size={32} onClick={handleGoBack} />
           </Link>
         </div>
       </header>

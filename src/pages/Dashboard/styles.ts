@@ -24,8 +24,7 @@ const Header = styled.header`
 const Logo = styled.img`
   position: static;
   width: 200px;
-  left: calc(50% - 200px / 2);
-  top: calc(50% - 37.76px / 2 - 411.12px);
+  margin: 20px;
 `;
 
 const UserInformation = styled.div`

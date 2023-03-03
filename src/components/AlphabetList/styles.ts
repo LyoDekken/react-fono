@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   background-color: #ffff;
-  padding: 20px;
+  padding: 50px 20px;
+  height: calc(100vh - 150px); // ou outro valor que você preferir
+  overflow-y: auto;
   font-family: Arial, sans-serif;
 `;
 

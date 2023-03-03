@@ -8,6 +8,7 @@ import {
   faChevronUp,
 } from '@fortawesome/free-solid-svg-icons';
 
+import { Link } from 'react-router-dom';
 import {
   Wrapper,
   LetterSection,
@@ -81,8 +82,10 @@ const AlphabeticalList: React.FC = () => {
             ? sections[letter] &&
               sections[letter].map(patient => (
                 <PatientContainer key={patient.id}>
-                  <FontAwesomeIcon icon={faFileMedicalAlt} />
-                  <PatientName>{patient.name}</PatientName>
+                  <Link to={`/patient/${patient.id}`}>
+                    <FontAwesomeIcon icon={faFileMedicalAlt} />
+                    <PatientName>{patient.name}</PatientName>
+                  </Link>
                 </PatientContainer>
               ))
             : null}

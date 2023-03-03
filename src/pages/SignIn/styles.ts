@@ -41,7 +41,7 @@ export const AnimationContainer = styled.div`
   animation: ${appearFromLeft} 1s;
 
   form {
-    margin: 80px 0;
+    margin: 65px 0;
     width: 340px;
     text-align: center;
 
@@ -86,4 +86,21 @@ export const Background = styled.div`
   flex: 1;
   background: url(${signInBackgroundImg}) no-repeat center;
   background-size: contain;
+`;
+
+export const LoginButtons = styled.div`
+  display: flex;
+  flex-direction: column; /* altera a direção dos itens para coluna */
+  justify-content: center; /* centraliza os itens verticalmente */
+  margin-top: 16px;
+
+  button {
+    background-color: #3b5998; /* cor de fundo do Facebook */
+    color: #fff; /* cor do texto do Facebook */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 8px 16px;
+    margin-bottom: 16px; /* espaçamento entre os botões */
+  }
 `;

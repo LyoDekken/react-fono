@@ -15,7 +15,9 @@ import {
 
 import { Settings, Info, Lock, ExitToApp, Menu } from '@material-ui/icons';
 
+// eslint-disable-next-line import/extensions
 import { removeStorage } from '../../services/adminStorage';
+import { useAuth } from '../../hooks/auth';
 
 const drawerWidth = 240;
 
@@ -40,6 +42,8 @@ const useStyles = makeStyles(theme => ({
 function SideMenu() {
   const classes = useStyles();
 
+  const { signOut } = useAuth();
+
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -50,7 +54,7 @@ function SideMenu() {
     setOpen(false);
   };
 
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type, @typescript-eslint/no-unused-vars
   const logout = () => {
     removeStorage('nameStorage');
     removeStorage('jwt');
@@ -107,7 +111,7 @@ function SideMenu() {
             </ListItemIcon>
             <ListItemText primary="Privacidade e segurança" />
           </ListItem>
-          <ListItem button key="Logout" onClick={logout}>
+          <ListItem button key="Logout" onClick={signOut}>
             <ListItemIcon>
               <ExitToApp />
             </ListItemIcon>
